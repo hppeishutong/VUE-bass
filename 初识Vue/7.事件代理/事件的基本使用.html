@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+            <h1>欢迎来到{{name}}学习</h1>
+            <button @click="showINFO">点</button>
+            <button @click="showINFO1($event,66)">点</button>
+    </div>
+</body>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el:"#root",
+            data() {
+                return {
+                    name:"尚硅谷"
+                };
+            },
+            methods: {
+                showINFO(enent) {
+                    alert('你好')
+                },
+                showINFO1(event,num) {
+                  console.log(num,event)
+
+                },
+            },
+        })
+    </script>
+</html>
